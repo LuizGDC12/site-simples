@@ -1,0 +1,73 @@
+/* 1. Cores Base */
+:root {
+    --green: #06eb4b;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* 2. Definição dos Temas */
+.light-theme {
+    --bg: var(--white);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--white); /* Coloquei verde aqui para ficar igual à imagem que você queria! */
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+/* 3. Aplicação Real no Body */
+body {
+    background-color: var(--bg);
+    color: var(--fontColor);
+    font-family: monospace;
+    transition: background-color 0.3s, color 0.3s; /* Deixa a troca suave */
+}
+
+/* 4. Estilos dos Elementos */
+ul {
+    font-family: helvetica;
+}
+
+li {
+    list-style: circle;
+}
+
+.list {
+    list-style: square;
+}
+
+/* 5. Estilo do Botão */
+.btn {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Mudei para 'right' para não sumir da tela em janelas menores */
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    cursor: pointer;
+}
+
+.btn:focus { outline: none; }
+
+/* quando o mouse passar por cima do botao */
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* quando o botao e clicado */
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* ajuste no seletor .btn original*/
+.btn {
+    transition: transform 0.2s ease-in-out;
+}
